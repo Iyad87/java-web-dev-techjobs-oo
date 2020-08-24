@@ -7,12 +7,16 @@ public abstract class JobField {
     private int id;
     private static int nextId = 1;
 
+    // Constructor assigns a unique ID number to each new object.
     public JobField() {
-        this.id = nextId;
+        id = nextId;
         nextId++;
     }
 
+    // Constructor that takes a string as a parameter and assigns it to the 'value' field, and also
+    // calls the empty constructor in order to initialize the 'id' field.
     public JobField(String value) {
+        this();
         this.value = value;
     }
 
